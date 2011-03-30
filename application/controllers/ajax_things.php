@@ -102,6 +102,7 @@ class Ajax_things extends Master_Controller {
 		$this->db->set('site_slogan',$this->input->post('site_slogan'));
 		$this->db->set('site_date_format',$this->input->post('site_date_format'));
 		$this->db->set('site_default_keywords',$this->input->post('site_default_keywords'));
+		$this->db->set('site_default_description',$this->input->post('site_default_description'));
 		$this->db->set('site_home_page_type',$this->input->post('site_home_page_type'));
 		$this->db->set('site_per_page_post',$this->input->post('site_per_page_post'));
 		$this->db->set('site_status',$this->input->post('site_status'));
