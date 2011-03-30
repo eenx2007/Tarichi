@@ -1,0 +1,168 @@
+Change Log 
+
+Tarichi 2.0.1.3 Sidebling
+	
+	Features ::
+		- Add function search_item in all module
+
+	Modules ::
+	
+	Bug Fix ::
+		- Move all "wrong url" to blank_page.php
+		- Make single file to view many type post list
+
+	File Changed ::
+		- add new file for skin blank_page.php
+		- /modules/comment_management/controllers/comment_management.php
+			* fixing pagination
+
+		- /modules/category_management/models/category_model.php
+			* fix function get_category();
+
+		- /applications/models/template_model.php
+			* Added function get_gravatar
+
+		- /skins/vilabe/blueprint/own_s.css
+			* add class reply_comment
+			* add class comment_box
+			* add class searchboxbig
+			* add class searchbuttonbig
+
+		- /skins/vilabe/read_post.php
+			* change get_captcha link to skin_engine/read_post/get_captcha
+			* add function reply comment
+			* reply comment now working
+
+		- /skins/vilabe/footer.php
+			* add yahoo messanger box
+
+		- /skins/vilabe/top.php
+			* fixing searchbox position
+
+		- /modules/skin_engine/controllers/read_post.php
+			* add function read_captcha -> moved from comment_management
+			* prevent "wrong url" to blank_page.php
+
+		- /modules/skin_engine/views/side_panel.php
+
+		- /modules/skin_engine/controllers/home_page.php
+			* add array variable - link_to_comment
+			* add new controllers - search
+
+		- /modules/skin_engine/controllers/read_page.php
+			* prevent wrong url" to blank_page.php	
+
+		- /applications/core/Frontsite_Controller.php
+			* load sidebar_panel after load sidebar model
+
+
+
+Tarichi 2.0.1.2 Sidebling
+
+	Database ::
+		- Add new field "the_post_comment" to table "the_post"
+	
+	Modules ::
+		- Add New Core Module "Comments V.0.8"
+
+	Update Module Skin Engine 1.1 :: 
+		- Tags on post loop
+		- Form must be post to http://webaddress/skin_engine/read_post/send_comment/$sp_id
+
+	Update Module Post Management 1.1 ::
+		- Allow Comment Option for each post
+		- Better function of TinyMCE Plugin
+
+	Bug Fix ::
+		- Capitalization filename for Extended Controller (eg. Frontsite_Controller)
+
+	System ::
+		- Added MY_captcha_helper
+		- Added "HOME_CAP" for "back to home link" in template_model->get_menu()
+		- Added check "uri" and force Selected_menu class to top_menu
+
+
+Tarichi 2.0.1.1 Sidebling
+
+	Update to CodeIgniter 2.0.1
+
+	Change all system to HMVC
+
+	Style ::
+		- Changed to Fluid 
+
+	Databases::
+		- Add "site_language" field to site_config table
+		- Add New Table -> add_on
+
+	Functions ::
+		- New Submenu : General Configuration -> Module Management
+		- New Submenu : General Configuration -> Site Preview
+
+	Modules ::
+		- Add New Core Module "Page Management V.1.0"
+		- Add New Core Module "Category Management V.1.0"
+		- Add New Core Module "Static Home Page V.1.0"
+		- Add New Core Module "Skin Chooser V.1.0"
+		- Add New Core Module "Side Panel v.1.0"
+		- Add New Core Module "Post Management V.1.0"
+		- Add New Core Module "Image Library V.1.0"
+		- Add New Core Module "Skin Engine V.1.0"
+
+	Feature ::
+		- Add Language Selector on Site Config
+		- HMVC Modulear on ./modules
+
+
+	Bug Fix ::
+		- Remove "add new tag" when edit post without a Tag
+
+
+Tarichi 2.0.1
+	=:Feature Added:=
+		- Added Skins Chooser.
+		- Working Progress status when changing content
+		- Submenu level 1 now included inside Top Level Menu
+		  * Drag and drop to change Menu Order
+		- Pagination for Posts in backpanel
+		- Independent Image Uploader
+		- comment Management Update 
+		  * Select All to Delete / Approval
+		  * Comment Moderation Globally
+		- Easy to type PHP Syntax for Skins
+		- Side Panel items now different between global and read post
+		- Using CAPTCHA helper on comment form
+		- Tagging for post
+		- Add Tag Cloud to Side Panel Item
+		- Show By Tag at Frontsite
+		- Better Comment Management
+
+	=:Technical Update:=
+		- Update to CodeIgniter 2.0
+		- Folder based reading for Skin Chooser (./skins/)
+		- Descriptions for skin saved on "description.txt"
+		- Activating a skin do not require to refresh the whole page
+		- Global variable data given for each view ($this->data['variable_name'])
+		- All ajax request using Post Method
+		- Use global variable for each view file
+		- Changing Image Uploader Popup from Dialog to standar :abosulte: div
+		- No Direct field_name call in generating template (skins)
+		- Change Skins folder structure to /skins/{skin_name}/views/* to protect direct access
+		- Type $side_panel only to access side_panel on Skin
+		- CAPTCHA images saved on ./captcha folder
+		- Two Table added {the_tag : the_tag_id, the_tag_name}, and {the_tag_connector : the_tag_connector_id, the_tag_id, the_post_id}
+		- Hide all element using {display:none;} not from javascript
+
+	=:To do List:=
+		- Images Library
+		- Edit Comment
+		- Search Box
+		- Gallery Type -> Static Page Menu
+		- Contact Type -> Static Page menu
+
+
+Tarichi 2.0.0
+	- Major Changes, please read readme.txt for detail
+
+Tarichi 0.3.1
+	- Release :)
