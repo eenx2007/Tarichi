@@ -1,0 +1,1 @@
+Nivo Slider Add-on;1.0;Direct Script;Add-on;Add image slider;nivo_image_slider;nivo_image_slider;element,false,500,8000,1;

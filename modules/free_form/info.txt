@@ -1,0 +1,1 @@
+Free Form Add-on;1.0;Frontpage;Add-on;Create Form you need;free_form;free_form;form_1,form_2;

@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+
+.t_header{
+	background:url(images/t_header.png) repeat-x;
+	height:30px;
+	color:#FFF;
+}
+
+.t_header a{
+	text-decoration:none;
+	color:#FFF;
+
+	padding-left:5px;
+	padding-right:5px;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.t_header .selected{
+	border-bottom:1px solid #FFF;	
+	font-weight:bold;
+	padding-bottom:5px;
+	padding-left:5px;
+	padding-right:5px;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.t_header td{
+	padding-top:6px;
+	padding-bottom:6px;
+	padding-left:6px;
+	padding-right:6px;
+	border-right:1px solid #45555F;
+}
+
+.t_d_last{
+	padding-top:6px;
+	padding-bottom:6px;
+	padding-left:6px;
+	padding-right:6px;
+}
+
+td{
+	padding-top:6px;
+	padding-bottom:6px;
+	padding-left:6px;
+	padding-right:6px;
+	border-right:1px solid #D0D7DF;
+	
+}
+
+
+
+.t_r_even{
+	background:#DEE6E9;
+	border-bottom:1px solid #D0D7DF;
+}
+
+.t_r_odd{
+	background:#ECF1F4;
+	border-bottom:1px solid #D0D7DF;
+}

@@ -1,0 +1,1 @@
+Skin Chooser;0.9;BackPanel;Base;To Change skin/template for homepage;
