@@ -25,8 +25,8 @@
 		$readinfo=split(';',$infofile);
 		
 	?>
-        <tr class="<?=$odev;?>">
-        	<td><?=$readinfo[0];?></td><td><?=$readinfo[1];?></td><td><?=$readinfo[2];?></td><td><?=$readinfo[3];?></td><td><?=$readinfo[4];?></td>
+        <tr class="<?php echo $odev;?>">
+        	<td><?php echo $readinfo[0];?></td><td><?php echo $readinfo[1];?></td><td><?php echo $readinfo[2];?></td><td><?php echo $readinfo[3];?></td><td><?php echo $readinfo[4];?></td>
             <td class="t_d_last">
             	<? if($readinfo[3]=="Add-on")
 				{ 
@@ -38,21 +38,21 @@
 				?>
                 <script type="text/javascript">
 					$(document).ready(function(){
-						$('.activate_modul_<?=$readinfo[5];?>').click(function(){
-							var ao_id='<?=$readinfo[5];?>';
-							var ao_name='<?=$readinfo[0];?>';
-							var ao_def_controller='<?=$readinfo[6];?>';
-							var ao_def_setting='<?=$readinfo[7];?>';
+						$('.activate_modul_<?php echo $readinfo[5];?>').click(function(){
+							var ao_id='<?php echo $readinfo[5];?>';
+							var ao_name='<?php echo $readinfo[0];?>';
+							var ao_def_controller='<?php echo $readinfo[6];?>';
+							var ao_def_setting='<?php echo $readinfo[7];?>';
 							var bapak=$(this).parent();
-							$.post('<?=site_url('ajax_things/activate_module');?>',{add_on_id : ao_id, add_on_name : ao_name, add_on_def_controller : ao_def_controller, add_on_def_setting : ao_def_setting}, function(){
-								$(bapak).html('Activated / <a href="javascript:void(0);" class="deactivate_modul_<?=$readinfo[5];?>">Disable Now</a>');
+							$.post('<?php echo site_url('ajax_things/activate_module');?>',{add_on_id : ao_id, add_on_name : ao_name, add_on_def_controller : ao_def_controller, add_on_def_setting : ao_def_setting}, function(){
+								$(bapak).html('Activated / <a href="javascript:void(0);" class="deactivate_modul_<?php echo $readinfo[5];?>">Disable Now</a>');
 							});
 						});
-						$('.deactivate_modul_<?=$readinfo[5];?>').click(function(){
-							var ao_id='<?=$readinfo[5];?>';
+						$('.deactivate_modul_<?php echo $readinfo[5];?>').click(function(){
+							var ao_id='<?php echo $readinfo[5];?>';
 							var bapak=$(this).parent();
-							$.post('<?=site_url('ajax_things/deactivate_module');?>',{add_on_id : ao_id},function(){
-								$(bapak).html('Disable / <a href="javascript:void(0);" class="activate_modul_<?=$readinfo[5];?>">Enable Now</a>');
+							$.post('<?php echo site_url('ajax_things/deactivate_module');?>',{add_on_id : ao_id},function(){
+								$(bapak).html('Disable / <a href="javascript:void(0);" class="activate_modul_<?php echo $readinfo[5];?>">Enable Now</a>');
 							});
 						});
 					});

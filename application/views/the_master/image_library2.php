@@ -11,7 +11,7 @@
 				$('.mvtedt').click(function(){
 						var the_image=$(this).attr('alt');
 						
-						$('.tinymce_content').tinymce().execCommand('mceInsertContent',false,'<img src=<?=base_url();?>image_library/'+the_image+' />');
+						$('.tinymce_content').tinymce().execCommand('mceInsertContent',false,'<img src=<?php echo base_url();?>image_library/'+the_image+' />');
 											});
 				
 							   });
@@ -47,15 +47,15 @@
 				$thumbnya=substr($nama_file,-6);
 				if($thumbnya<>'_thumb')
 				{ ?>
-					<div class="<?=$odev;?>" style="width:450px;">
+					<div class="<?php echo $odev;?>" style="width:450px;">
 						<div class="t_d_in span-5">
-							<?=$imgs;?> <img src="<?=base_url();?>blueprint/images/preview.png" style="float:right;cursor:pointer;" alt="<?=$imgs;?>" title="Move To Editor" class="mvtedt">
+							<?php echo $imgs;?> <img src="<?php echo base_url();?>blueprint/images/preview.png" style="float:right;cursor:pointer;" alt="<?php echo $imgs;?>" title="Move To Editor" class="mvtedt">
 							<div class="preview" style="position:absolute;border:2px solid #666;padding:5px;background:#FFF;display:none;">
-								<img src="<?=base_url();?>image_library/<?=$nama_file;?>_thumb.<?=$pisah[1];?>" />
+								<img src="<?php echo base_url();?>image_library/<?php echo $nama_file;?>_thumb.<?php echo $pisah[1];?>" />
 							</div>
 						</div>
-						<div class="t_d_in span-3"><?=get_mime_by_extension($imgs);?></div>
-						<div class="t_d_in span-2" style="text-align:right;"><?=number_format($infofile['size']/1024,2);?> KB</div>
+						<div class="t_d_in span-3"><?php echo get_mime_by_extension($imgs);?></div>
+						<div class="t_d_in span-2" style="text-align:right;"><?php echo number_format($infofile['size']/1024,2);?> KB</div>
 					</div>
 
 				<? } ?>

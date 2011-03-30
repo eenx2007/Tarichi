@@ -2,8 +2,8 @@
 <div id="left_content" class="span-16">
 	
     <div class="the_post span-16">
-    	<h3><?=$site_slogan;?></h3>
-    	<p><?=$messages;?></p>
+    	<h3><?php echo $site_slogan;?></h3>
+    	<p><?php echo $messages;?></p>
      </div>
     
 </div>

@@ -16,7 +16,7 @@
 					var s_main_email = $('#site_main_email').val();
 					var s_split_post = $('#site_split_post').val();
 					var s_language = $('#site_language').val();
-					$.post('<?=site_url('ajax_things/save_site_config');?>',{
+					$.post('<?php echo site_url('ajax_things/save_site_config');?>',{
 										  site_name : s_name,
 										  site_slogan  :s_slogan,
 										  site_date_format : s_date_format,
@@ -42,27 +42,27 @@
     
     <div class="tigaperempat formbox">
     	<div class="formboxtitle">
-        	<?=lang('caption_site_configuration');?>
+        	<?php echo lang('caption_site_configuration');?>
         </div>
         <div class="formboxitem">
             <label>Site Name</label><br />
-            <input type="text" name="site_name" id="site_name" style="width:95%;" value="<?=$row->site_name;?>" />
+            <input type="text" name="site_name" id="site_name" style="width:95%;" value="<?php echo $row->site_name;?>" />
         </div>
         <div class="formboxitem">
             <label>Site Slogan</label><br />
-            <input type="text" name="site_slogan" id="site_slogan" style="width:95%;" value="<?=$row->site_slogan;?>" />
+            <input type="text" name="site_slogan" id="site_slogan" style="width:95%;" value="<?php echo $row->site_slogan;?>" />
         </div>
         <div class="formboxitem">
             <label>Date Format</label><br />
-            <input type="text" name="site_date_format" id="site_date_format" value="<?=$row->site_date_format;?>" />
+            <input type="text" name="site_date_format" id="site_date_format" value="<?php echo $row->site_date_format;?>" />
         </div>
         <div class="formboxitem">
         <label>Default Keywords</label><br />
-        <input type="text" name="site_default_keywords" id="site_default_keywords" value="<?=$row->site_default_keywords;?>" style="width:95%" /><br />
+        <input type="text" name="site_default_keywords" id="site_default_keywords" value="<?php echo $row->site_default_keywords;?>" style="width:95%" /><br />
         </div>
         <div class="formboxitem">
             <label>Default Description</label><br />
-            <textarea name="site_default_description" id="site_default_description" style="width:95%;"><?=$row->site_default_description;?></textarea>
+            <textarea name="site_default_description" id="site_default_description" style="width:95%;"><?php echo $row->site_default_description;?></textarea>
         </div>
    	</div>
     <div class="seperempat last formbox">
@@ -82,7 +82,7 @@
         </div>
         <div class="formboxitem">
             <label>Total Post Per Page</label><br />
-            <input type="text" name="site_per_page_post" id="site_per_page_post" value="<?=$row->site_per_page_post;?>" />
+            <input type="text" name="site_per_page_post" id="site_per_page_post" value="<?php echo $row->site_per_page_post;?>" />
         </div>
         <div class="formboxitem">
             <label>Site Status</label><br />
@@ -99,11 +99,11 @@
         </div>
         <div class="formboxitem">
             <label>Main email</label><br />
-            <input type="text" name="site_main_email" value="<?=$row->site_main_email;?>" id="site_main_email" />
+            <input type="text" name="site_main_email" value="<?php echo $row->site_main_email;?>" id="site_main_email" />
         </div>
         <div class="formboxitem">
             <label>Total Character to Split Post</label><br />
-            <input type="text" name="site_split_post" value="<?=$row->site_split_post;?>" id="site_split_post" /><br />
+            <input type="text" name="site_split_post" value="<?php echo $row->site_split_post;?>" id="site_split_post" /><br />
             <span class="small">* give 0(zero) to split using TinyMCE Splitter</span>
         </div>
         <div class="formboxitem">
@@ -112,6 +112,6 @@
 	</div>
     
     <div id="loader_image" style="position:fixed;left:45%;top:40%;width:100px;height:50px;text-align:center;" class="the_page_item">
-    	 	<img src="<?=base_url();?>blueprint/images/ajax_start.gif" /> Saving ...
+    	 	<img src="<?php echo base_url();?>blueprint/images/ajax_start.gif" /> Saving ...
         </div>
 <? $this->load->view('the_master/footer'); ?>

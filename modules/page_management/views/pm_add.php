@@ -3,7 +3,7 @@
 	
 
 
-    <script type="text/javascript" src="<?=base_url();?>jquery/tiny_mce/jquery.tinymce.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>jquery/tiny_mce/jquery.tinymce.js"></script>
     <script type="text/javascript">
 		$(document).ready(function(){
 								   
@@ -30,15 +30,15 @@
 				$('#image_library').hide();	
 				$('#imglibbtn').click(function(){
 								$('#image_library').fadeToggle('fast');	
-								$('#image_library').load('<?=site_url('ajax_things/image_library');?>');
+								$('#image_library').load('<?php echo site_url('ajax_things/image_library');?>');
 											   });
 				
 				$('#imglibbtn2').click(function(){
 								$('#image_library2').fadeToggle('fast');
-								$('#image_library2').load('<?=site_url('ajax_things/image_library2');?>');
+								$('#image_library2').load('<?php echo site_url('ajax_things/image_library2');?>');
 												});
 				$('#the_page_content').tinymce({
-					script_url : '<?=base_url();?>jquery/tiny_mce/tiny_mce.js',					  
+					script_url : '<?php echo base_url();?>jquery/tiny_mce/tiny_mce.js',					  
 					relative_urls : false,
 
 					theme : "advanced",
@@ -60,8 +60,8 @@
 						}
 						else
 						{
-							$.post('<?=site_url('the_master/url_checker');?>',{ the_url : url_title},function(data){
-									$('#the_url_title').html('<?=site_url('the_page');?>/'+data+'<br />');	
+							$.post('<?php echo site_url('the_master/url_checker');?>',{ the_url : url_title},function(data){
+									$('#the_url_title').html('<?php echo site_url('the_page');?>/'+data+'<br />');	
 									$('#normal_link_to').val('the_page/'+data);
 																					   });						   
 						}
@@ -86,7 +86,7 @@
 							$('#contact_page').slideUp();
 							$('#per_category_page').slideDown();
 							
-							$.post('<?=site_url('page_management/pm_home/page_type_selector/per_category');?>', { the_pt_id : page_type_id },function(data){
+							$.post('<?php echo site_url('page_management/pm_home/page_type_selector/per_category');?>', { the_pt_id : page_type_id },function(data){
 										$('#per_category').html(data);
 										
 										});
@@ -116,7 +116,7 @@
 						
 												   });
 								   });
-	</script><?=form_open('page_management/pm_add');?>
+	</script><?php echo form_open('page_management/pm_add');?>
     
    
     <div class="penuh formbox">
@@ -128,7 +128,7 @@
         </div>
          <div class="formboxitem t_r_even" style="text-align:right;">
                 
-                <input type="submit" value="Save" name="save" class="savebtn"> <a href="<?=site_url('page_management/pm_home');?>" class="discardbtn">Discard</a>
+                <input type="submit" value="Save" name="save" class="savebtn"> <a href="<?php echo site_url('page_management/pm_home');?>" class="discardbtn">Discard</a>
             </div>
         <div class="formboxitem" style="clear:both;">
             <label>Page Type</label><br />
@@ -172,19 +172,19 @@
         <div class="seperempat last">
         	<div class="formboxitem">
                 <div id="image_library" style="position:absolute;margin-left:-475px;width:500px;margin-top:-5px;">
-                    <img src="<?=base_url();?>blueprint/images/ajax_start.gif"  />	
+                    <img src="<?php echo base_url();?>blueprint/images/ajax_start.gif"  />	
                 </div>
            		 <a href="javascript:void(0);" class="imageuploaderbtn" id="imglibbtn">Image Uploader</a>
 			</div>
             <div class="formboxitem">
             	<div id="image_library2" class="" style="position:absolute;margin-left:-475px;width:500px;margin-top:-5px;display:none;">
-        		<img src="<?=base_url();?>blueprint/images/ajax_start.gif"  />	
+        		<img src="<?php echo base_url();?>blueprint/images/ajax_start.gif"  />	
          		</div>
 		         <a href="javascript:void(0);" class="imagelibrarybtn" id="imglibbtn2">Image Library</a>
         	</div> 
             <div class="formboxitem">
 	            <label>Menu Title</label><br />
-    	        <?=form_input('the_page_menu');?> 
+    	        <?php echo form_input('the_page_menu');?> 
             </div>
             <div class="formboxitem">
 	            <label>Parent Page</label><br />
@@ -201,5 +201,5 @@
     		   
         </div>
     </div>
-    <?=form_close();?>
+    <?php echo form_close();?>
 <? $this->load->view('the_master/footer'); ?>

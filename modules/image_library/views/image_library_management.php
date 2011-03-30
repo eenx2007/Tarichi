@@ -45,15 +45,15 @@
 			{
 			
 			?>
-                <tr class="<?=$odev;?>">
-                    <td><?=$imgs;?> <img src="<?=base_url();?>blueprint/images/preview.png" style="float:right;cursor:pointer;" title="preview" class="previewbtn">
+                <tr class="<?php echo $odev;?>">
+                    <td><?php echo $imgs;?> <img src="<?php echo base_url();?>blueprint/images/preview.png" style="float:right;cursor:pointer;" title="preview" class="previewbtn">
                         <div class="preview" style="position:absolute;border:2px solid #666;padding:5px;background:#FFF;display:none;">
-                            <img src="<?=base_url();?>image_library/<?=$nama_file;?>_thumb.<?=$pisah[1];?>" />
+                            <img src="<?php echo base_url();?>image_library/<?php echo $nama_file;?>_thumb.<?php echo $pisah[1];?>" />
                         </div>
                     </td>
-                    <td><?=ucwords($pisah[1]);?></td>
-                    <td><?=number_format($infofile['size']/1024,2);?> KB</td>
-                    <td><?=mdate('%d/%m/%Y %h:%i:%s',$infofile['date']);?></td>
+                    <td><?php echo ucwords($pisah[1]);?></td>
+                    <td><?php echo number_format($infofile['size']/1024,2);?> KB</td>
+                    <td><?php echo mdate('%d/%m/%Y %h:%i:%s',$infofile['date']);?></td>
                     <td>
                         
                     </td>
@@ -63,6 +63,6 @@
     </div>
     
      <div id="loader_image" style="position:fixed;left:45%;top:40%;width:100px;height:50px;text-align:center;display:none;" class="the_page_item">
-    	 	<img src="<?=base_url();?>blueprint/images/ajax_start.gif" /> Changing ...
+    	 	<img src="<?php echo base_url();?>blueprint/images/ajax_start.gif" /> Changing ...
         </div>
 <? $this->load->view('the_master/footer'); ?>

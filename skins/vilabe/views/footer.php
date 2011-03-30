@@ -5,7 +5,7 @@
         	<div class="span-12">
             	<h3>Jejaring Sosial</h3>
                 <ul>
-                	<li><img src="<?=$base_site_url;?>blueprint/images/fb.png" /> <img src="<?=$base_site_url;?>blueprint/images/tw.png" /></li>
+                	<li><img src="<?php echo $base_site_url;?>blueprint/images/fb.png" /> <img src="<?php echo $base_site_url;?>blueprint/images/tw.png" /></li>
                 </ul>
             </div>
             <div class="span-12 last">

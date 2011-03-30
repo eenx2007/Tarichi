@@ -1,11 +1,11 @@
 <? $this->load->view('the_master/top'); ?>	
-<script type="text/javascript" src="<?=base_url();?>jquery/ui/ui.core.js"></script>
-<link rel="stylesheet" href="<?=base_url();?>jquery/ui/themes/ui-lightness/jquery.ui.all.css">
-<link rel="stylesheet" type="text/css" href="<?=base_url();?>jquery/ui/themes/redmond/ui.dialog.css" />
-<link rel="stylesheet" type="text/css" href="<?=base_url();?>jquery/ui/themes/redmond/ui.resizable.css" />
-<script type="text/javascript" src="<?=base_url();?>jquery/ui/ui.dialog.js"></script>
-<script type="text/javascript" src="<?=base_url();?>jquery/ui/ui.resizable.js"></script>
-<script type="text/javascript" src="<?=base_url();?>jquery/ui/ui.draggable.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>jquery/ui/ui.core.js"></script>
+<link rel="stylesheet" href="<?php echo base_url();?>jquery/ui/themes/ui-lightness/jquery.ui.all.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>jquery/ui/themes/redmond/ui.dialog.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>jquery/ui/themes/redmond/ui.resizable.css" />
+<script type="text/javascript" src="<?php echo base_url();?>jquery/ui/ui.dialog.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>jquery/ui/ui.resizable.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>jquery/ui/ui.draggable.js"></script>
 
 <script type="text/javascript">
 	 	$(document).ready(function(){
@@ -42,7 +42,7 @@
         
     </div>
  		 <div class="formboxitem t_d_even">
-            <a href="<?=site_url('post_management/psm_add');?>" class="addnewbtn">Add New</a>
+            <a href="<?php echo site_url('post_management/psm_add');?>" class="addnewbtn">Add New</a>
         </div>
         	<table>
             <tr class="t_header">
@@ -59,19 +59,19 @@
 				else
 					$eod="t_r_odd";
 			?> 
-           <tr class="<?=$eod;?>">
+           <tr class="<?php echo $eod;?>">
            	<td>
-            	<?=mdate('%d/%m/%Y %h:%i:%s',$rows->the_post_date);?>
+            	<?php echo mdate('%d/%m/%Y %h:%i:%s',$rows->the_post_date);?>
             </td>
             <td>
-				<a href="<?=site_url('post_management/psm_edit/index/'.$rows->the_post_id);?>" title="<?=character_limiter(strip_tags($rows->the_post_content),70);?>"><?=character_limiter($rows->the_post_title,70);?></a><br />
+				<a href="<?php echo site_url('post_management/psm_edit/index/'.$rows->the_post_id);?>" title="<?php echo character_limiter(strip_tags($rows->the_post_content),70);?>"><?php echo character_limiter($rows->the_post_title,70);?></a><br />
                 
             </td>
             <td>
-            	<strong><?=$rows->category_name;?></strong>
+            	<strong><?php echo $rows->category_name;?></strong>
             </td>
             <td>
-                <a href="<?=site_url('post_management/psm_home/delete/'.$rows->the_post_id);?>" class="delete_confirm">Delete</a>
+                <a href="<?php echo site_url('post_management/psm_home/delete/'.$rows->the_post_id);?>" class="delete_confirm">Delete</a>
                 
            	</td> 
            
@@ -79,7 +79,7 @@
          	 
             <? } ?>
 		<tr class="t_header">
-			<td colspan="4"><?=$the_pagination;?></td>
+			<td colspan="4"><?php echo $the_pagination;?></td>
         </tr>
        
         </table>

@@ -1,12 +1,12 @@
 <? $this->load->view('the_master/top'); ?>	
-<script type="text/javascript" src="<?=base_url();?>jquery/tiny_mce/jquery.tinymce.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>jquery/tiny_mce/jquery.tinymce.js"></script>
     <script type="text/javascript">
 		$(document).ready(function(){
 					
 					$('.delete_tag').click(function(){
 						var tc_id=$(this).attr('alt');
 						var bapak=$(this).parent();
-						$.post('<?=site_url('ajax_things/delete_tag');?>',{ the_tag_connector_id : tc_id },function(){
+						$.post('<?php echo site_url('ajax_things/delete_tag');?>',{ the_tag_connector_id : tc_id },function(){
 							$(bapak).fadeOut('fast');					
 						});
 		
@@ -35,16 +35,16 @@
 					$('#image_library').hide();	
 					$('#imglibbtn').click(function(){
 								$('#image_library').fadeToggle('fast');	
-								$('#image_library').load('<?=site_url('ajax_things/image_library');?>');
+								$('#image_library').load('<?php echo site_url('ajax_things/image_library');?>');
 											   });
 					
 					$('#imglibbtn2').click(function(){
 									$('#image_library2').fadeToggle('fast');
-									$('#image_library2').load('<?=site_url('ajax_things/image_library2');?>');
+									$('#image_library2').load('<?php echo site_url('ajax_things/image_library2');?>');
 													});			   
 								   
 					$('#the_post_content').tinymce({
-					script_url : '<?=base_url();?>jquery/tiny_mce/tiny_mce.js',					  
+					script_url : '<?php echo base_url();?>jquery/tiny_mce/tiny_mce.js',					  
 					relative_urls : false,
 
 					theme : "advanced",
@@ -61,41 +61,41 @@
 				$('#the_post_title').keyup(function(){
 					    var url_title=$(this).val();
 						$('#the_url_title').fadeIn();
-						$.post('<?=site_url('the_master/url_checker');?>',{ the_url : url_title},function(data){
-								$('#the_url_title').html('<?=site_url('read');?>/<?=date('Y/m/d');?>/'+data+'<br />');	
+						$.post('<?php echo site_url('the_master/url_checker');?>',{ the_url : url_title},function(data){
+								$('#the_url_title').html('<?php echo site_url('read');?>/<?php echo date('Y/m/d');?>/'+data+'<br />');	
 								
 																				   });						   
 												   });
 								   });
 	</script>
-    <?=form_open('post_management/psm_edit/index/'.$row->the_post_id);?>
+    <?php echo form_open('post_management/psm_edit/index/'.$row->the_post_id);?>
     
     <div class="formbox penuh">
     	<div class="formboxtitle">
        		Edit Post
        	</div>
        	<div class="formboxitem t_r_even" style="text-align:right;">
-                <input type="submit" value="Save" name="save" class="savebtn"> <a href="<?=site_url('post_management/psm_home');?>" class="discardbtn">Discard</a>
+                <input type="submit" value="Save" name="save" class="savebtn"> <a href="<?php echo site_url('post_management/psm_home');?>" class="discardbtn">Discard</a>
         </div>
         <div class="tigaperempat border">
            	<div class="formboxitem">
                 <label>Post Title</label> <br /><span id="the_url_title" style="font-size:10px;color:#CC0;"></span>
-                <input type="text" name="the_post_title" id="the_post_title" style="width:95%;" value="<?=$row->the_post_title;?>" />
+                <input type="text" name="the_post_title" id="the_post_title" style="width:95%;" value="<?php echo $row->the_post_title;?>" />
             </div>
             <div class="formboxitem">
-                <textarea name="the_post_content" id="the_post_content" class="tinymce_content" style="width:95%;height:400px;"><?=$row->the_post_content;?></textarea>
+                <textarea name="the_post_content" id="the_post_content" class="tinymce_content" style="width:95%;height:400px;"><?php echo $row->the_post_content;?></textarea>
             </div>
         </div>
         <div class="seperempat last">
         	<div class="formboxitem">
             	<div id="image_library" style="position:absolute;margin-left:-475px;width:500px;margin-top:-5px;">
-                    <img src="<?=base_url();?>blueprint/images/ajax_start.gif"  />	
+                    <img src="<?php echo base_url();?>blueprint/images/ajax_start.gif"  />	
                 </div>
             	<a href="javascript:void(0);" class="imageuploaderbtn" id="imglibbtn">Image Uploader</a>
             </div>   
             <div class="formboxitem">
             	<div id="image_library2" class="" style="position:absolute;margin-left:-475px;width:500px;margin-top:-5px;display:none;">
-        		<img src="<?=base_url();?>blueprint/images/ajax_start.gif"  />	
+        		<img src="<?php echo base_url();?>blueprint/images/ajax_start.gif"  />	
          		</div>
             	<a href="javascript:void(0);" class="imagelibrarybtn" id="imglibbtn2">Image Library</a>
             </div>
@@ -129,11 +129,11 @@
 					foreach($querytag->result() as $rowstag)
 					{
 				?>
-                	<span class="tag_item"><?=$rowstag->the_tag_name;?> <img src="<?=base_url();?>blueprint/images/delete_small.png" alt="<?=$rowstag->the_tag_connector_id;?>" style="position:relative;margin-bottom:0;cursor:pointer;" class="delete_tag" /></span>
+                	<span class="tag_item"><?php echo $rowstag->the_tag_name;?> <img src="<?php echo base_url();?>blueprint/images/delete_small.png" alt="<?php echo $rowstag->the_tag_connector_id;?>" style="position:relative;margin-bottom:0;cursor:pointer;" class="delete_tag" /></span>
                 <? } ?>
             </div>    
             
         </div>
     </div>
-    <?=form_close();?>
+    <?php echo form_close();?>
 	<? $this->load->view('the_master/footer'); ?>

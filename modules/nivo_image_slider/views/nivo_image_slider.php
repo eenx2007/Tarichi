@@ -8,7 +8,7 @@
 			var a_speed=$('#anim_speed').val();
 			var p_time=$('#pause_time').val();
 			var opct=$('#opacityx').val();
-			$.post('<?=site_url('nivo_image_slider/save_config');?>',{elementx:elmnt,control_nav:cnav,anim_speed:a_speed,pause_time:p_time,opacityx:opct},function(){
+			$.post('<?php echo site_url('nivo_image_slider/save_config');?>',{elementx:elmnt,control_nav:cnav,anim_speed:a_speed,pause_time:p_time,opacityx:opct},function(){
 				
 			});
 		});
@@ -21,7 +21,7 @@
         </div>
         <div class="formboxitem">
         	<label>Element</label><br />
-			<input type="text" name="elementx" id="elementx" value="<?=$detailnya[0];?>" />
+			<input type="text" name="elementx" id="elementx" value="<?php echo $detailnya[0];?>" />
         </div>
         <div class="formboxitem">
         	<label>Control Nav</label><br />
@@ -31,11 +31,11 @@
         </div>
         <div class="formboxitem">
         	<label>Animation Speed</label><br />
-          	<input type="text" name="anim_speed" id="anim_speed" value="<?=$detailnya[2];?>" />
+          	<input type="text" name="anim_speed" id="anim_speed" value="<?php echo $detailnya[2];?>" />
         </div>
         <div class="formboxitem">
         	<label>Pause Time</label><br />
-            <input type="text" name="pause_time" id="pause_time" value="<?=$detailnya[3];?>" />
+            <input type="text" name="pause_time" id="pause_time" value="<?php echo $detailnya[3];?>" />
         </div>
         <div class="formboxitem">
         	<label>Opacity</label><br />

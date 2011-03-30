@@ -1,25 +1,25 @@
 <? $this->load->view('the_master/top'); ?>	
-<script type="text/javascript" src="<?=base_url();?>jquery/ui/ui.core.js"></script>
-<link rel="stylesheet" href="<?=base_url();?>jquery/ui/themes/ui-lightness/jquery.ui.all.css">
+<script type="text/javascript" src="<?php echo base_url();?>jquery/ui/ui.core.js"></script>
+<link rel="stylesheet" href="<?php echo base_url();?>jquery/ui/themes/ui-lightness/jquery.ui.all.css">
 
 
-<link rel="stylesheet" type="text/css" href="<?=base_url();?>jquery/ui/themes/redmond/ui.dialog.css" />
-<link rel="stylesheet" type="text/css" href="<?=base_url();?>jquery/ui/themes/redmond/ui.resizable.css" />
-<script type="text/javascript" src="<?=base_url();?>jquery/ui/ui.dialog.js"></script>
-<script type="text/javascript" src="<?=base_url();?>jquery/ui/ui.resizable.js"></script>
-<script type="text/javascript" src="<?=base_url();?>jquery/ui/ui.draggable.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>jquery/ui/themes/redmond/ui.dialog.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>jquery/ui/themes/redmond/ui.resizable.css" />
+<script type="text/javascript" src="<?php echo base_url();?>jquery/ui/ui.dialog.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>jquery/ui/ui.resizable.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>jquery/ui/ui.draggable.js"></script>
 
-<script type="text/javascript" src="<?=base_url();?>jquery/ui/ui.sortable.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>jquery/ui/ui.sortable.js"></script>
     <script type="text/javascript">
 		$(document).ready(function(){
 				
 				
 				$('.view_sub_menu').click(function(){
 						var sekarang=$('img',this).attr('src');
-						if(sekarang=="<?=base_url();?>blueprint/images/submenu_square.png")
-							$('img',this).attr('src','<?=base_url();?>blueprint/images/close_square.png');	
+						if(sekarang=="<?php echo base_url();?>blueprint/images/submenu_square.png")
+							$('img',this).attr('src','<?php echo base_url();?>blueprint/images/close_square.png');	
 						else
-							$('img',this).attr('src','<?=base_url();?>blueprint/images/submenu_square.png');
+							$('img',this).attr('src','<?php echo base_url();?>blueprint/images/submenu_square.png');
 							var bapak=$(this).parent();
 							$('.the_sub_menu',bapak).slideToggle();
 							
@@ -33,19 +33,19 @@
 						var bapaklagi=$(bapaknya).parent();
 						if(sekarang=='Enable')
 						{
-							$('img',this).attr('src','<?=base_url();?>blueprint/images/disable.png');
+							$('img',this).attr('src','<?php echo base_url();?>blueprint/images/disable.png');
 							$(this).attr('title','Disable');
 							$(bapaklagi).fadeTo('slow',1);
 							var tp_enabled='1';
 						}
 						else if(sekarang=='Disable')
 						{
-							$('img',this).attr('src','<?=base_url();?>blueprint/images/enable.png');	
+							$('img',this).attr('src','<?php echo base_url();?>blueprint/images/enable.png');	
 							$(this).attr('title','Enable');
 							$(bapaklagi).fadeTo('slow',0.5);
 							var tp_enabled='0';
 						}
-						$.post('<?=site_url('page_management/pm_home/enabling_page');?>',{the_page_id : tp_id, the_page_enabled : tp_enabled},function(){
+						$.post('<?php echo site_url('page_management/pm_home/enabling_page');?>',{the_page_id : tp_id, the_page_enabled : tp_enabled},function(){
 						});
 						
 						
@@ -81,12 +81,12 @@
 								
 								stop: function() {
 									$('#info_sorting').fadeIn();
-									$('#info_sorting').html('<img src="<?=base_url();?>blueprint/images/ajax_start.gif"> Saving');
+									$('#info_sorting').html('<img src="<?php echo base_url();?>blueprint/images/ajax_start.gif"> Saving');
 									var kearray=$('#sortable').sortable("toArray");
 									var kestring=kearray.toString();
-									$.post('<?=site_url('page_management/pm_home/save_order');?>',{ tostring : kestring }, function(data){
+									$.post('<?php echo site_url('page_management/pm_home/save_order');?>',{ tostring : kestring }, function(data){
 											
-											$('#info_sorting').html('<img src="<?=base_url();?>blueprint/images/ajax_start.gif"> Order Saved');	
+											$('#info_sorting').html('<img src="<?php echo base_url();?>blueprint/images/ajax_start.gif"> Order Saved');	
 											$('#info_sorting').fadeOut('slow');
 																													  });
 								
@@ -109,7 +109,7 @@
     		
         </div>
          <div class="formboxitem t_r_even">
-    			<a href="<?=site_url('page_management/pm_add');?>" class="addnewbtn">Add New</a>
+    			<a href="<?php echo site_url('page_management/pm_add');?>" class="addnewbtn">Add New</a>
     	</div>
      
     	<ol id="sortable" style="margin-left:-10px;margin-top:10px;clear:both;">
@@ -118,21 +118,21 @@
 			$querysub=$this->the_page_model->get_by_parent($rows->the_page_id);
 			$totalsub=$querysub->num_rows;
 		?>
-        <div style="cursor:move;padding-top:0;width:99%;float:left;" title="drag to change order" id="<?=$rows->the_page_order;?>_<?=$rows->the_page_id;?>" class="the_page_item">
+        <div style="cursor:move;padding-top:0;width:99%;float:left;" title="drag to change order" id="<?php echo $rows->the_page_order;?>_<?php echo $rows->the_page_id;?>" class="the_page_item">
         	<? if($totalsub<>0)
 				{ ?><div class="view_sub_menu" style="margin-top:16px;width:4%;float:left;">
             	
-        		<span class="small"><a href="javascript:void(0);"><img src="<?=base_url();?>blueprint/images/submenu_square.png" title="View Submenu" /></a></span><br />
+        		<span class="small"><a href="javascript:void(0);"><img src="<?php echo base_url();?>blueprint/images/submenu_square.png" title="View Submenu" /></a></span><br />
                 
       		</div>
             <div class="tigaperempat" style="margin-top:15px;">
-                <strong><?=$rows->the_page_menu;?> (<?=$totalsub;?>)</strong>
+                <strong><?php echo $rows->the_page_menu;?> (<?php echo $totalsub;?>)</strong>
                
                 
             </div>
 			<? } else { ?>
             <div class="tigaperempat" style="margin-top:15px;">
-                <strong><?=$rows->the_page_menu;?></strong>
+                <strong><?php echo $rows->the_page_menu;?></strong>
                
                 
             </div>
@@ -141,10 +141,10 @@
           	<div class="seperempat last" style="text-align:right;margin-top:10px;width:25%;">
         		<span class="small">
                 	<? if($rows->the_page_enabled==1)
-						{ ?><a href="javascript:void(0);" class="enabling" title="Disable"><img src="<?=base_url();?>blueprint/images/disable.png" class="imgblur" alt="<?=$rows->the_page_id;?>" /></a>
+						{ ?><a href="javascript:void(0);" class="enabling" title="Disable"><img src="<?php echo base_url();?>blueprint/images/disable.png" class="imgblur" alt="<?php echo $rows->the_page_id;?>" /></a>
                         <? } elseif($rows->the_page_enabled==0)
-						{ ?><a href="javascript:void(0);" class="enabling" title="Enable"><img src="<?=base_url();?>blueprint/images/enable.png" class="imgblur" alt="<?=$rows->the_page_id;?>" /></a><? } ?>
-                         <a href="<?=site_url('page_management/pm_edit/index/'.$rows->the_page_id);?>"><img src="<?=base_url();?>blueprint/images/edit_square.png" title="Edit" class="imgblur" /></a> <a href="<?=site_url('page_management/pm_home/delete/'.$rows->the_page_id);?>" class="delete_confirm"><img src="<?=base_url();?>blueprint/images/delete_square.png" title="Delete" class="imgblur" /></a>
+						{ ?><a href="javascript:void(0);" class="enabling" title="Enable"><img src="<?php echo base_url();?>blueprint/images/enable.png" class="imgblur" alt="<?php echo $rows->the_page_id;?>" /></a><? } ?>
+                         <a href="<?php echo site_url('page_management/pm_edit/index/'.$rows->the_page_id);?>"><img src="<?php echo base_url();?>blueprint/images/edit_square.png" title="Edit" class="imgblur" /></a> <a href="<?php echo site_url('page_management/pm_home/delete/'.$rows->the_page_id);?>" class="delete_confirm"><img src="<?php echo base_url();?>blueprint/images/delete_square.png" title="Delete" class="imgblur" /></a>
                	</span><br />
                 
       		</div>
@@ -153,15 +153,15 @@
 				   foreach($querysub->result() as $rowssub)
 				   { ?>
                    <div class="formboxitem tigaperempat">
-                   		<div class="span-10 border"><?=$rowssub->the_page_menu;?></div>
+                   		<div class="span-10 border"><?php echo $rowssub->the_page_menu;?></div>
                         <div class="span-10 last"> 
                         <? if($rowssub->the_page_enabled==0)
 							{ ?>
-                            	<a href="javascript:void(0);" class="enabling2" title="Enable"><span title="<?=$rowssub->the_page_id;?>">Enable</span></a> | 
+                            	<a href="javascript:void(0);" class="enabling2" title="Enable"><span title="<?php echo $rowssub->the_page_id;?>">Enable</span></a> | 
                         <? } else { ?>
-                        		<a href="javascript:void(0);" class="enabling2" title="Disable"><span title="<?=$rowssub->the_page_id;?>">Disable</span></a> |
+                        		<a href="javascript:void(0);" class="enabling2" title="Disable"><span title="<?php echo $rowssub->the_page_id;?>">Disable</span></a> |
                         <? } ?>
-                        	<a href="<?=site_url('page_management/pm_edit/index/'.$rowssub->the_page_id);?>">Edit</a> | <a href="<?=site_url('page_management/pm_home/delete/'.$rowssub->the_page_id);?>" class="delete_confirm">Delete</a>
+                        	<a href="<?php echo site_url('page_management/pm_edit/index/'.$rowssub->the_page_id);?>">Edit</a> | <a href="<?php echo site_url('page_management/pm_home/delete/'.$rowssub->the_page_id);?>" class="delete_confirm">Delete</a>
                         </div>
                    </div>
                    <? } ?>

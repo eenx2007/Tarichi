@@ -1,8 +1,8 @@
 <? $this->load->view('the_master/top'); ?>	
- <script type="text/javascript" src="<?=base_url();?>jquery/tiny_mce/jquery.tinymce.js"></script>
+ <script type="text/javascript" src="<?php echo base_url();?>jquery/tiny_mce/jquery.tinymce.js"></script>
  
- 	<script type="text/javascript" src="<?=base_url();?>jquery/ui/ui.core.js"></script>
- 	<link rel="stylesheet" href="<?=base_url();?>jquery/ui/themes/ui-lightness/jquery.ui.all.css">
+ 	<script type="text/javascript" src="<?php echo base_url();?>jquery/ui/ui.core.js"></script>
+ 	<link rel="stylesheet" href="<?php echo base_url();?>jquery/ui/themes/ui-lightness/jquery.ui.all.css">
 
 <script type="text/javascript">
 	$(document).ready(function(){
@@ -31,18 +31,18 @@
 								   
 					$('#imglibbtn').click(function(){
 									$('#image_library').fadeToggle('fast');	
-									$('#image_library').load('<?=site_url('ajax_things/image_library');?>');
+									$('#image_library').load('<?php echo site_url('ajax_things/image_library');?>');
 												   });
 					
 					$('#imglibbtn2').click(function(){
 									$('#image_library2').fadeToggle('open');
-									$('#image_library2').load('<?=site_url('ajax_things/image_library2');?>');
+									$('#image_library2').load('<?php echo site_url('ajax_things/image_library2');?>');
 													});		
 			$('#save').click(function(){
 					$('#loader_image').show();
 					var s_h_p_title = $('#static_home_page_title').val();
 					var s_h_p_content = $('#static_home_page_content').val();
-					$.post('<?=site_url('static_home_page/save');?>',{
+					$.post('<?php echo site_url('static_home_page/save');?>',{
 										  static_home_page_title : s_h_p_title,
 										  static_home_page_content : s_h_p_content
 									   }, function(data){
@@ -52,7 +52,7 @@
 									  });
 			
 			$('#static_home_page_content').tinymce({
-					script_url : '<?=base_url();?>jquery/tiny_mce/tiny_mce.js',					  
+					script_url : '<?php echo base_url();?>jquery/tiny_mce/tiny_mce.js',					  
 					relative_urls : false,
 
 					theme : "advanced",
@@ -77,10 +77,10 @@
         </div>
         <div class="formboxitem">
         	<label>Title</label><br />
-        	<input type="text" name="static_home_page_title" value="<?=$row->static_home_page_title;?>" id="static_home_page_title" style="width:98%;">
+        	<input type="text" name="static_home_page_title" value="<?php echo $row->static_home_page_title;?>" id="static_home_page_title" style="width:98%;">
         </div>
         <div class="formboxitem">
-            <textarea id="static_home_page_content" name="static_home_page_type" class="tinymce_content" style="width:98%;"><?=$row->static_home_page_content;?></textarea>
+            <textarea id="static_home_page_content" name="static_home_page_type" class="tinymce_content" style="width:98%;"><?php echo $row->static_home_page_content;?></textarea>
        	</div>
         
     </div>
@@ -89,18 +89,18 @@
         	Tools
         </div>
         <div class="formboxitem">
-    	 <a href="javascript:void(0);" class="savebtn" id="save">Save</a> <img src="<?=base_url();?>blueprint/images/ajax_start.gif" id="loader_image" />
+    	 <a href="javascript:void(0);" class="savebtn" id="save">Save</a> <img src="<?php echo base_url();?>blueprint/images/ajax_start.gif" id="loader_image" />
     	</div>
         
         <div class="formboxitem">
     		<div id="image_library" class="" style="position:absolute;margin-left:-475px;width:500px;margin-top:-5px;display:none;">
-        		<img src="<?=base_url();?>blueprint/images/ajax_start.gif"  />	
+        		<img src="<?php echo base_url();?>blueprint/images/ajax_start.gif"  />	
          	</div>
          	<a href="javascript:void(0);" class="imageuploaderbtn" id="imglibbtn">Image Uploader</a>
         </div>
         <div class="formboxitem">
         	<div id="image_library2" class="" style="position:absolute;margin-left:-475px;width:500px;margin-top:-5px;display:none;">
-        		<img src="<?=base_url();?>blueprint/images/ajax_start.gif"  />	
+        		<img src="<?php echo base_url();?>blueprint/images/ajax_start.gif"  />	
          	</div>
         	<a href="javascript:void(0);" class="imagelibrarybtn" id="imglibbtn2">Image Library</a>
         </div>

@@ -3,16 +3,16 @@
 	<? foreach($the_post as $post):?>
     <div class="the_post span-16">
         
-            <h3><?=$post['title'];?></h3>
+            <h3><?php echo $post['title'];?></h3>
             <div class="post_info span-16">
-                <span class="post_date"><?=$post['date'];?></span> <span class="post_tags">Tags: <?=$post['tags'];?></span><a href="<?=$post['link_to_comment'];?>" style="text-decoration:none;"><span class="post_comment"><?=$post['totalcomment'];?> Komentar</span></a>
+                <span class="post_date"><?php echo $post['date'];?></span> <span class="post_tags">Tags: <?php echo $post['tags'];?></span><a href="<?php echo $post['link_to_comment'];?>" style="text-decoration:none;"><span class="post_comment"><?php echo $post['totalcomment'];?> Komentar</span></a>
             </div>
-            <p><?=$post['content'];?></p>
+            <p><?php echo $post['content'];?></p>
     </div>
     
      <? endforeach; ?>
     <div class="pagination span-16">
-       <?=$the_pagination;?>
+       <?php echo $the_pagination;?>
     </div>
 </div>
 <? $this->load->view($site_skin.'/sidebar'); ?>
