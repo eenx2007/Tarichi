@@ -23,6 +23,17 @@ class Global_model extends CI_Model {
 		return $query->row();
 	}
 	
+	function update_profile($user_id)
+	{
+		$this->db->set('username',$this->username);
+		if($this->password<>'')
+			$this->db->set('password',$this->password);
+		$this->db->set('nama_lengkap',$this->nama_lengkap);
+		$this->db->where('user_id',$user_id);
+		$this->db->update('user');
+		
+	}
+	
 	function update_skin($site_skin)
 	{
 		$this->db->set('site_skin',$site_skin);
