@@ -107,8 +107,20 @@ class The_master extends Master_Controller {
 	function my_profile()
 	{
 		$this->data['bcum']='My Profile';
-		$this->data['row']=$this->global_model->get_my_profile($this->session->userdata('user_login'));
 		
+		if($this->input->post('save'))
+		{
+			$this->global_model->username=$this->input->post('username');
+			if($this->input->post('password'))
+				$this->global_model->password=md5($this->input->post('password'));
+			else
+				$this->global_module->password='';
+			$this->global_model->nama_lengkap=$this->input->post('nama_lengkap');
+			$this->global_model->update_profile($this->session->userdata('user_login'));
+				
+			
+		}
+		$this->data['row']=$this->global_model->get_my_profile($this->session->userdata('user_login'));
 		$this->load->view('the_master/my_profile',$this->data);
 	}
 	
