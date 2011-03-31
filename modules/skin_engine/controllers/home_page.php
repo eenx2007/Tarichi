@@ -37,7 +37,7 @@ class Home_page extends Frontsite_Controller {
 				else
 				{
 					$pecah=explode('<p><!-- pagebreak --></p>',$rowspost->the_post_content);
-					$the_post[$i]['content']=$pecah[0];	
+					$the_post[$i]['content']=$pecah[0].' <a href="'.site_url('read/'.$rowspost->the_post_year.'/'.$rowspost->the_post_month.'/'.$rowspost->the_post_day.'/'.$rowspost->the_post_title_url).'">Read More</a>';	
 				}
 				$querytag=$this->the_tag_model->get_per_post($rowspost->the_post_id);
 				$totaltag=$querytag->num_rows;
