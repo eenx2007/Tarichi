@@ -58,7 +58,7 @@
             <label>Image file</label> <input type="file" name="img_name" id="img_name" /><br />
             </div>
             <div class="formboxitem">
-            <a href="#" class="btnmerah" id="upload_now" onclick="return ajaxFileUpload();">Upload</a> <img src="<?php echo base_url();?>blueprint/images/ajax_start.gif" id="upload_loader" />
+            <a href="#" class="btnmerah" id="upload_now" onclick="return ajaxFileUpload();">Upload</a> <img src="<?php echo base_url();?>assets/blueprint/images/ajax_start.gif" id="upload_loader" />
             </div>
         </div>
     </div>
