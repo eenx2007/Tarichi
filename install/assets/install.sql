@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 28, 2011 at 01:22 PM
+-- Generation Time: Mar 31, 2011 at 11:53 AM
 -- Server version: 5.1.30
 -- PHP Version: 5.2.8
 
@@ -182,7 +182,7 @@ CREATE TABLE IF NOT EXISTS `site_config` (
 --
 
 INSERT INTO `site_config` (`site_name`, `site_slogan`, `site_date_format`, `site_skin`, `site_status`, `site_home_page_type`, `site_per_page_post`, `site_comment_moderation`, `site_main_email`, `site_default_keywords`, `site_default_description`, `site_split_post`, `site_language`) VALUES
-('Tarichi 2', 'Sebuah Web Publishing System', '%d/%m/%Y %h:%i:%s', 'default', 1, 1, 5, 1, 'yourmail@domain.com', 'tarichi, web publishing system, cms', 'Ini situs cuma contoh', 100, 'english');
+('Tarichi 2', 'Sebuah Web Publishing System', '%d/%m/%Y %h:%i:%s', 'vilabe', 1, 1, 5, 1, 'yourmail@domain.com', 'tarichi, web publishing system, cms', 'Ini situs cuma contoh', 100, 'english');
 
 -- --------------------------------------------------------
 
