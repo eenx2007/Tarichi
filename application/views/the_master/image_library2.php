@@ -49,7 +49,7 @@
 				{ ?>
 					<tr class="<?php echo $odev;?>">
 						<td>
-							<?php echo $imgs;?> <img src="<?php echo base_url();?>blueprint/images/preview.png" style="float:right;cursor:pointer;" alt="<?php echo $imgs;?>" title="Move To Editor" class="mvtedt">
+							<?php echo $imgs;?> <img src="<?php echo base_url();?>assets/blueprint/images/preview.png" style="float:right;cursor:pointer;" alt="<?php echo $imgs;?>" title="Move To Editor" class="mvtedt">
 							<div class="preview" style="position:absolute;border:2px solid #666;padding:5px;background:#FFF;display:none;">
 								<img src="<?php echo base_url();?>image_library/<?php echo $nama_file;?>_thumb.<?php echo $pisah[1];?>" />
 							</div>
