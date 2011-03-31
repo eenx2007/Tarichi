@@ -1,9 +1,10 @@
+
+<script type="text/javascript" src="<?php echo base_url();?>jquery/ajaxfileupload.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 			$('#upload_loader').hide();				   
 							   });
 </script>
-<script type="text/javascript" src="<?php echo base_url();?>jquery/ajaxfileupload.js"></script>
 <script type="text/javascript">
 	
 		function ajaxFileUpload()
@@ -49,8 +50,8 @@
 	<div class="imguptitle">
 		Image Uploader
     </div>
-    <div style="width:450px;" class="imgupcontent">
-    	<div class="formbox">
+    <div style="width:450px;float:left;" class="imgupcontent">
+    	<div class="formbox" style="width:450px;">
         	<div class="formboxtitle">
             </div>
             <div class="formboxitem">
