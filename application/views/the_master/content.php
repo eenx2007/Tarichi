@@ -47,7 +47,7 @@
                     <div class="formboxitem"><a href="<?php echo site_url('post_management/psm_add');?>">Create New</a></div>
                     <div class="formboxitem"><a href="<?php echo site_url('post_management/psm_home');?>">Manage</a></div>
                     <div class="formboxitem"><a href="<?php echo site_url('category_management/cm_home');?>">Manage Category</a></div>
-                    <div class="formboxitem"><a href="<?php echo site_url('the_master/comment_management');?>">Manage Comment</a></div>
+                    <div class="formboxitem"><a href="<?php echo site_url('comment_management');?>">Manage Comment</a></div>
             </div>
             <? } else {
 				
