@@ -9,8 +9,15 @@ class Frontsite_Controller extends MY_Controller
 	function __construct()
  	{
 		parent::__construct();
-		
+		$this->load->library('user_agent');
+		if ($this->agent->is_mobile())
+		{
+			$this->site_config->site_skin='mobile';
+			
+			
+		}
 		$this->data['site_skin']='../../skins/'.$this->site_config->site_skin.'/views/';
+		
 		$this->load->model('side_panel/side_panel_model');
 		$this->load->model('page_management/the_page_model');
 		$this->load->model('post_management/the_post_model');
