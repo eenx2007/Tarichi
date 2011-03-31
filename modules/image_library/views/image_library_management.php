@@ -46,7 +46,7 @@
 			
 			?>
                 <tr class="<?php echo $odev;?>">
-                    <td><?php echo $imgs;?> <img src="<?php echo base_url();?>blueprint/images/preview.png" style="float:right;cursor:pointer;" title="preview" class="previewbtn">
+                    <td><?php echo $imgs;?> <img src="<?php echo base_url();?>assets/blueprint/images/preview.png" style="float:right;cursor:pointer;" title="preview" class="previewbtn">
                         <div class="preview" style="position:absolute;border:2px solid #666;padding:5px;background:#FFF;display:none;">
                             <img src="<?php echo base_url();?>image_library/<?php echo $nama_file;?>_thumb.<?php echo $pisah[1];?>" />
                         </div>
@@ -63,6 +63,6 @@
     </div>
     
      <div id="loader_image" style="position:fixed;left:45%;top:40%;width:100px;height:50px;text-align:center;display:none;" class="the_page_item">
-    	 	<img src="<?php echo base_url();?>blueprint/images/ajax_start.gif" /> Changing ...
+    	 	<img src="<?php echo base_url();?>assets/blueprint/images/ajax_start.gif" /> Changing ...
         </div>
 <? $this->load->view('the_master/footer'); ?>

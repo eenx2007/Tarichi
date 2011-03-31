@@ -35,4 +35,5 @@ class Pm_edit extends Master_Controller {
 			redirect('page_management/pm_home');
 		}
 	}
+	
 }

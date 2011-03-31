@@ -210,13 +210,13 @@
         <div class="seperempat last">
             <div class="formboxitem">
             	 <div id="image_library" style="position:absolute;margin-left:-475px;width:500px;margin-top:-5px;">
-                    <img src="<?php echo base_url();?>blueprint/images/ajax_start.gif"  />	
+                    <img src="<?php echo base_url();?>assets/blueprint/images/ajax_start.gif"  />	
                 </div>
             	<a href="javascript:void(0);" class="imageuploaderbtn" id="imglibbtn">Open Image Uploader</a>
             </div>
             <div class="formboxitem">	
             	<div id="image_library2" class="" style="position:absolute;margin-left:-475px;width:500px;margin-top:-5px;display:none;">
-        		<img src="<?php echo base_url();?>blueprint/images/ajax_start.gif"  />	
+        		<img src="<?php echo base_url();?>assets/blueprint/images/ajax_start.gif"  />	
          	</div>
                 <a href="javascript:void(0);" class="imagelibrarybtn" id="imglibbtn2">Open Image Library</a>
             </div>

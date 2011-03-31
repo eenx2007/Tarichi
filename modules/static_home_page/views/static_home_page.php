@@ -72,9 +72,13 @@
     
    
     <div class="tigaperempat formbox">
+    	
         <div class="formboxtitle">
             Static Home Page
         </div>
+        <div class="t_r_even formboxitem">
+    	 <a href="javascript:void(0);" class="savebtn" id="save">Save</a> <img src="<?php echo base_url();?>assets/blueprint/images/ajax_start.gif" id="loader_image" style="position:fixed;" />
+    	</div>
         <div class="formboxitem">
         	<label>Title</label><br />
         	<input type="text" name="static_home_page_title" value="<?php echo $row->static_home_page_title;?>" id="static_home_page_title" style="width:98%;">
@@ -88,19 +92,17 @@
     	<div class="formboxtitle">
         	Tools
         </div>
-        <div class="formboxitem">
-    	 <a href="javascript:void(0);" class="savebtn" id="save">Save</a> <img src="<?php echo base_url();?>blueprint/images/ajax_start.gif" id="loader_image" />
-    	</div>
+        
         
         <div class="formboxitem">
     		<div id="image_library" class="" style="position:absolute;margin-left:-475px;width:500px;margin-top:-5px;display:none;">
-        		<img src="<?php echo base_url();?>blueprint/images/ajax_start.gif"  />	
+        		<img src="<?php echo base_url();?>assets/blueprint/images/ajax_start.gif"  />	
          	</div>
          	<a href="javascript:void(0);" class="imageuploaderbtn" id="imglibbtn">Image Uploader</a>
         </div>
         <div class="formboxitem">
         	<div id="image_library2" class="" style="position:absolute;margin-left:-475px;width:500px;margin-top:-5px;display:none;">
-        		<img src="<?php echo base_url();?>blueprint/images/ajax_start.gif"  />	
+        		<img src="<?php echo base_url();?>assets/blueprint/images/ajax_start.gif"  />	
          	</div>
         	<a href="javascript:void(0);" class="imagelibrarybtn" id="imglibbtn2">Image Library</a>
         </div>

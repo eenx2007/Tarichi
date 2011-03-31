@@ -16,7 +16,7 @@ foreach($querysp->result() as $rowssp)
 			foreach($querycom2->result() as $rowscom2)
 			{ ?>
 				<li>
-                <img src="<?php echo $this->template_model->get_gravatar($rowscom2->comment_email);?>" height="30" style="padding-bottom:10px;padding-right:4px;padding-top:3px;" align="left" />
+                <img src="<?php echo $this->template_model->get_gravatar($rowscom2->comment_email);?>" height="30" width="30" style="padding:3px;margin-right:5px;background:#666;border-radius:3px;" align="left" />
 				<? if($rowscom2->comment_website<>'') { ?><a href="<?php echo $rowscom2->comment_website;?>"> <? } ?>
 				<?php echo $rowscom2->comment_name;?><? if($rowscom2->comment_website<>'') { ?></a><? } ?> on <a href="<?php echo site_url('read/'.$rowscom2->the_post_year.'/'.$rowscom2->the_post_month.'/'.$rowscom2->the_post_day.'/'.$rowscom2->the_post_title_url);?>#comment_<?php echo $rowscom2->comment_id;?>"><?php echo $rowscom2->the_post_title;?></a><br />
 					<span class="small"><?php echo mdate($site_date_format,$rowscom2->comment_date);?></span><br />

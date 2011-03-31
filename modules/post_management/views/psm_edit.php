@@ -89,13 +89,13 @@
         <div class="seperempat last">
         	<div class="formboxitem">
             	<div id="image_library" style="position:absolute;margin-left:-475px;width:500px;margin-top:-5px;">
-                    <img src="<?php echo base_url();?>blueprint/images/ajax_start.gif"  />	
+                    <img src="<?php echo base_url();?>assets/blueprint/images/ajax_start.gif"  />	
                 </div>
             	<a href="javascript:void(0);" class="imageuploaderbtn" id="imglibbtn">Image Uploader</a>
             </div>   
             <div class="formboxitem">
             	<div id="image_library2" class="" style="position:absolute;margin-left:-475px;width:500px;margin-top:-5px;display:none;">
-        		<img src="<?php echo base_url();?>blueprint/images/ajax_start.gif"  />	
+        		<img src="<?php echo base_url();?>assets/blueprint/images/ajax_start.gif"  />	
          		</div>
             	<a href="javascript:void(0);" class="imagelibrarybtn" id="imglibbtn2">Image Library</a>
             </div>
@@ -129,7 +129,7 @@
 					foreach($querytag->result() as $rowstag)
 					{
 				?>
-                	<span class="tag_item"><?php echo $rowstag->the_tag_name;?> <img src="<?php echo base_url();?>blueprint/images/delete_small.png" alt="<?php echo $rowstag->the_tag_connector_id;?>" style="position:relative;margin-bottom:0;cursor:pointer;" class="delete_tag" /></span>
+                	<span class="tag_item"><?php echo $rowstag->the_tag_name;?> <img src="<?php echo base_url();?>assets/blueprint/images/delete_small.png" alt="<?php echo $rowstag->the_tag_connector_id;?>" style="position:relative;margin-bottom:0;cursor:pointer;" class="delete_tag" /></span>
                 <? } ?>
             </div>    
             

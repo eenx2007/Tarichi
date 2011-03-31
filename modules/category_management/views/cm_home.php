@@ -14,10 +14,10 @@
 			
 			$('.view_sub_menu').click(function(){
 					var sekarang=$('img',this).attr('src');
-					if(sekarang=="<?php echo base_url();?>blueprint/images/submenu_square.png")
-						$('img',this).attr('src','<?php echo base_url();?>blueprint/images/close_square.png');	
+					if(sekarang=="<?php echo base_url();?>assets/blueprint/images/submenu_square.png")
+						$('img',this).attr('src','<?php echo base_url();?>assets/blueprint/images/close_square.png');	
 					else
-						$('img',this).attr('src','<?php echo base_url();?>blueprint/images/submenu_square.png');
+						$('img',this).attr('src','<?php echo base_url();?>assets/blueprint/images/submenu_square.png');
 						
 						var bapak=$(this).parent();
 						$('.the_sub_menu',bapak).slideToggle('fast');
@@ -68,14 +68,14 @@
 			?>
 				<div class="the_page_item" style="padding-top:0;width:95%;margin-right:10px;float:left;">
 					<div class="view_sub_menu" style="margin-top:16px;float:left;width:3%;">
-						<span class="small"><a href="javascript:void(0);"><img src="<?php echo base_url();?>blueprint/images/submenu_square.png" title="Show Detail" alt="open" /></a></span><br />
+						<span class="small"><a href="javascript:void(0);"><img src="<?php echo base_url();?>assets/blueprint/images/submenu_square.png" title="Show Detail" alt="open" /></a></span><br />
 					</div>
 					<div class="tigaperempat" style="margin-top:15px;">
 						<strong><?php echo $rows->category_name;?></strong>
 					</div>
 					<div class="last" style="text-align:right;margin-top:10px;width:10%;float:left;">
-						<a href="<?php echo site_url('category_management/cm_edit/index/'.$rows->category_id);?>" style="text-decoration:none;color:#333"><img src="<?php echo base_url();?>blueprint/images/edit_square.png" title="Edit" class="imgblur" /></a>
-						<a href="<?php echo site_url('category_management/cm_home/delete/'.$rows->category_id);?>" title="Delete <?php echo $rows->category_name;?>" class="delete_confirm"><img src="<?php echo base_url();?>blueprint/images/delete_square.png" title="Delete" class="imgblur" /></a>
+						<a href="<?php echo site_url('category_management/cm_edit/index/'.$rows->category_id);?>" style="text-decoration:none;color:#333"><img src="<?php echo base_url();?>assets/blueprint/images/edit_square.png" title="Edit" class="imgblur" /></a>
+						<a href="<?php echo site_url('category_management/cm_home/delete/'.$rows->category_id);?>" title="Delete <?php echo $rows->category_name;?>" class="delete_confirm"><img src="<?php echo base_url();?>assets/blueprint/images/delete_square.png" title="Delete" class="imgblur" /></a>
 					</div>
 					<div class="the_sub_menu">
 						<div class="formboxitem">

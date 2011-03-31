@@ -5,7 +5,7 @@ class Psm_home extends Master_Controller {
 	function index()
 	{
 		$this->load->library('pagination');
-		$config['base_url'] = site_url('page_management/pm_home');
+		$config['base_url'] = site_url('post_management/psm_home/index');
 		$config['total_rows'] = $this->the_post_model->total_post_all();
 		$config['uri_segment'] = 4;
 		$config['per_page'] = 10; 

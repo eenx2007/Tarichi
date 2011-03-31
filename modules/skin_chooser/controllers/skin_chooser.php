@@ -4,6 +4,7 @@ class Skin_chooser extends Master_Controller {
 
 	function index()
 	{
+		$this->lang->load('skin_chooser', $this->site_config->site_language);
 		$this->load->helper('directory');
 		$this->load->helper('file');
 		$this->data['skin_list']=directory_map('./skins/',1);

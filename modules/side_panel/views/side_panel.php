@@ -1,11 +1,11 @@
 <? $this->load->view('the_master/top'); ?>
-<script type="text/javascript" src="<?php echo base_url();?>jquery/ui/ui.core.js"></script>
- <link rel="stylesheet" href="<?php echo base_url();?>jquery/ui/themes/ui-lightness/jquery.ui.all.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>jquery/ui/themes/redmond/ui.dialog.css" />
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>jquery/ui/themes/redmond/ui.resizable.css" />
-	<script type="text/javascript" src="<?php echo base_url();?>jquery/ui/ui.dialog.js"></script>
-	<script type="text/javascript" src="<?php echo base_url();?>jquery/ui/ui.resizable.js"></script>
-    <script type="text/javascript" src="<?php echo base_url();?>jquery/ui/ui.draggable.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets/jquery/ui/ui.core.js"></script>
+ <link rel="stylesheet" href="<?php echo base_url();?>assets/jquery/ui/themes/ui-lightness/jquery.ui.all.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/jquery/ui/themes/redmond/ui.dialog.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/jquery/ui/themes/redmond/ui.resizable.css" />
+	<script type="text/javascript" src="<?php echo base_url();?>assets/jquery/ui/ui.dialog.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>assets/jquery/ui/ui.resizable.js"></script>
+    <script type="text/javascript" src="<?php echo base_url();?>assets/jquery/ui/ui.draggable.js"></script>
     
 <script type="text/javascript">
 	$(document).ready(function(){
@@ -76,7 +76,7 @@
     		<strong>Global Panel</strong>
         </div>
     	<div class="span-10" id="side_panel_list">
-    		<img src="<?php echo base_url();?>blueprint/images/ajax_start.gif" />
+    		<img src="<?php echo base_url();?>assets/blueprint/images/ajax_start.gif" />
         </div>
     </div>
     <div class="span-10 border">
@@ -84,13 +84,13 @@
     		<strong>Read Post Panel</strong>
         </div>
 		<div class="span-10" id="side_panel_list2">
-			<img src="<?php echo base_url();?>blueprint/images/ajax_start.gif" />
+			<img src="<?php echo base_url();?>assets/blueprint/images/ajax_start.gif" />
 		</div>
     </div>
     
 </div>  
 		<div id="loader_thing" style="position:fixed;left:40%;top:40%;width:100px;height:50px;" class="the_page_item">
-    	 	<img src="<?php echo base_url();?>blueprint/images/ajax_start.gif" /> Saving ...
+    	 	<img src="<?php echo base_url();?>assets/blueprint/images/ajax_start.gif" /> Saving ...
         </div>
     <div id="dialog_add_new" title="Add New Panel Item" style="display:none;">
  	  	<label>Title</label><br />

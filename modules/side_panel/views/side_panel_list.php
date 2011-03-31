@@ -1,5 +1,5 @@
 
-<script type="text/javascript" src="<?php echo base_url();?>jquery/ui/ui.sortable.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets/jquery/ui/ui.sortable.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		$('#sortable<?php echo $side_panel_status;?>').sortable({
@@ -50,7 +50,7 @@
                 
 			</div>
 			<div class="span-4 last" style="text-align:right;">
-				<img src="<?php echo base_url();?>blueprint/images/slide_down.png" id="slide_btn_<?php echo $rows->side_panel_id;?>" style="cursor:pointer;" title="edit" /> <img src="<?php echo base_url();?>blueprint/images/delete_small.png" class="deletebtn" id="<?php echo $side_panel_status;?>" style="cursor:pointer;" title="delete" alt="<?php echo $rows->side_panel_id;?>" />
+				<img src="<?php echo base_url();?>assets/blueprint/images/slide_down.png" id="slide_btn_<?php echo $rows->side_panel_id;?>" style="cursor:pointer;" title="edit" /> <img src="<?php echo base_url();?>assets/blueprint/images/delete_small.png" class="deletebtn" id="<?php echo $side_panel_status;?>" style="cursor:pointer;" title="delete" alt="<?php echo $rows->side_panel_id;?>" />
             </div>
             
             <div class="span-9" id="config_thing_<?php echo $rows->side_panel_id;?>" style="display:none;">
