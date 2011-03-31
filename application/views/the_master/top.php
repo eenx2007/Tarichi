@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>blueprint/screen.css" media="screen"/>
-<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>blueprint/print.css" media="print" />
-<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>blueprint/mystyle.css"/>
-<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>blueprint/buttons_icon.css"/>
-<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>blueprint/css_table.css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/blueprint/screen.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/blueprint/print.css" media="print" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/blueprint/mystyle.css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/blueprint/buttons_icon.css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/blueprint/css_table.css"/>
 
-<script type="text/javascript" src="<?php echo base_url();?>jquery/jquery-1.5.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>jquery/jquery.hoverIntent.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets/jquery/jquery-1.5.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets/jquery/jquery.hoverIntent.js"></script>
 
 
 <script type="text/javascript">
@@ -40,7 +40,7 @@
 	<div class="container">
     	<div class="span-24" id="header">
         	<div id="logo" style="width:250px;float:left;">
-        		<a href="<?php echo site_url('the_master');?>" title="<?php echo lang('caption_btd');?>"><img src="<?php echo base_url();?>blueprint/images/logo.png" alt="tarichi logo" /></a>
+        		<a href="<?php echo site_url('the_master');?>" title="<?php echo lang('caption_btd');?>"><img src="<?php echo base_url();?>assets/blueprint/images/logo.png" alt="tarichi logo" /></a>
             </div>
             <div id="breadcrumb">
 		
@@ -65,10 +65,10 @@
 
         	<ul> <? if($this->session->userdata('user_login'))
 					{ ?>
-            	<li><a href="javascript:void(0);" class="dropdownbtn">Logged As <?php echo $this->session->userdata('username');?></a>
+            	<li><a href="javascript:void(0);" class="dropdownbtn"><?php echo lang('caption_logged_as');?> <?php echo $this->session->userdata('username');?></a>
                 	<div><span></span></div>
                     <ul>
-                    	<li><a href="<?php echo site_url('the_master/my_profile');?>">Edit Profile</a></li>
+                    	<li><a href="<?php echo site_url('the_master/my_profile');?>"><?php echo lang('caption_edit_profile');?></a></li>
                         <li><a href="<?php echo site_url('the_master/logout');?>">Logout</a></li>
                     </ul>
                 </li>

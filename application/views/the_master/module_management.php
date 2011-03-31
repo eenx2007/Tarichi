@@ -2,12 +2,12 @@
 
 <div class="formbox penuh">
 	<div class="formboxtitle">
-    	Module Management
+    	<?php echo lang('caption_module_management');?>
     </div>
     
     <table>
     	<tr class="t_header">
-        	<td>Name</td><td>Ver</td><td>Function</td><td>Type</td><td>Description</td><td class="t_d_last">Status</td></tr>
+        	<td><?php echo lang('caption_name');?></td><td><?php echo lang('caption_ver');?></td><td><?php echo lang('caption_function');?></td><td><?php echo lang('caption_type');?></td><td><?php echo lang('caption_description');?></td><td class="t_d_last"><?php echo lang('caption_status');?></td></tr>
         </tr>
          <? foreach($module_list as $modules)
 		{ 
@@ -58,7 +58,7 @@
 					});
 				</script>	
                 <? } elseif($readinfo[3]=="Base")
-					echo "Auto Activated"; ?>
+					echo lang('caption_auto_activated'); ?>
                     
             </td></tr>
         </tr>

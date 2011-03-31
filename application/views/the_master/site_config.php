@@ -45,73 +45,73 @@
         	<?php echo lang('caption_site_configuration');?>
         </div>
         <div class="formboxitem">
-            <label>Site Name</label><br />
+            <label><?php echo lang('caption_site_name');?></label><br />
             <input type="text" name="site_name" id="site_name" style="width:95%;" value="<?php echo $row->site_name;?>" />
         </div>
         <div class="formboxitem">
-            <label>Site Slogan</label><br />
+            <label><?php echo lang('caption_site_slogan');?></label><br />
             <input type="text" name="site_slogan" id="site_slogan" style="width:95%;" value="<?php echo $row->site_slogan;?>" />
         </div>
         <div class="formboxitem">
-            <label>Date Format</label><br />
+            <label><?php echo lang('caption_date_format');?></label><br />
             <input type="text" name="site_date_format" id="site_date_format" value="<?php echo $row->site_date_format;?>" />
         </div>
         <div class="formboxitem">
-        <label>Default Keywords</label><br />
+        <label><?php echo lang('caption_default_keywords');?></label><br />
         <input type="text" name="site_default_keywords" id="site_default_keywords" value="<?php echo $row->site_default_keywords;?>" style="width:95%" /><br />
         </div>
         <div class="formboxitem">
-            <label>Default Description</label><br />
+            <label><?php echo lang('caption_default_descriptions');?></label><br />
             <textarea name="site_default_description" id="site_default_description" style="width:95%;"><?php echo $row->site_default_description;?></textarea>
         </div>
    	</div>
     <div class="seperempat last formbox">
     	<div class="formboxtitle">
-        	Extra Config
+        	<?php echo lang('caption_extra_config');?>
         </div>
         <div class="formboxitem">
-        	<label>Language</label><br />
+        	<label><?php echo lang('caption_language');?></label><br />
             <? echo form_dropdown('site_language',$the_lang,$row->site_language,'id="site_language"'); ?>
         </div>
         <div class="formboxitem">
-             <label>Home Page Type</label><br />
+             <label><?php echo lang('caption_home_page_type');?></label><br />
             <? 
                 $site_home_page_type=array('1'=>'Blog Style','2'=>'Static Page Style');
                 echo form_dropdown('site_home_page_type',$site_home_page_type,$row->site_home_page_type,'id="site_home_page_type"');
             ?>
         </div>
         <div class="formboxitem">
-            <label>Total Post Per Page</label><br />
+            <label><?php echo lang('caption_total_post_per_page');?></label><br />
             <input type="text" name="site_per_page_post" id="site_per_page_post" value="<?php echo $row->site_per_page_post;?>" />
         </div>
         <div class="formboxitem">
-            <label>Site Status</label><br />
+            <label><?php echo lang('caption_site_status');?></label><br />
             <? 
                 $site_status=array('1'=>'Available','2'=>'Maintenance','3'=>'On Upgrade');
                 echo form_dropdown('site_status',$site_status,$row->site_status,'id="site_status"');
             ?>
         </div>
         <div class="formboxitem">
-            <label>Comment Moderation</label><br />
+            <label><?php echo lang('caption_comment_moderation');?></label><br />
             <? $site_comment_moderation=array('0'=>'OFF','1'=>'ON');
                 echo form_dropdown('site_comment_moderation',$site_comment_moderation,$row->site_comment_moderation,'id="site_comment_moderation"');
             ?>
         </div>
         <div class="formboxitem">
-            <label>Main email</label><br />
+            <label><?php echo lang('caption_main_email');?></label><br />
             <input type="text" name="site_main_email" value="<?php echo $row->site_main_email;?>" id="site_main_email" />
         </div>
         <div class="formboxitem">
-            <label>Total Character to Split Post</label><br />
+            <label><?php echo lang('caption_total_char_to_split_post');?></label><br />
             <input type="text" name="site_split_post" value="<?php echo $row->site_split_post;?>" id="site_split_post" /><br />
             <span class="small">* give 0(zero) to split using TinyMCE Splitter</span>
         </div>
         <div class="formboxitem">
-           <a href="javascript:void(0);" class="savebtn" id="save">Save</a>
+           <a href="javascript:void(0);" class="savebtn" id="save"><?php echo lang('caption_save');?></a>
         </div>
 	</div>
     
     <div id="loader_image" style="position:fixed;left:45%;top:40%;width:100px;height:50px;text-align:center;" class="the_page_item">
-    	 	<img src="<?php echo base_url();?>blueprint/images/ajax_start.gif" /> Saving ...
+    	 	<img src="<?php echo base_url();?>assets/blueprint/images/ajax_start.gif" /> <?php echo lang('caption_saving');?> ...
         </div>
 <? $this->load->view('the_master/footer'); ?>
