@@ -11,8 +11,8 @@
 	<div class="imguptitle">
     	<?php echo $nama_file_gambar;?>
     </div>
-    <div style="width:450px;" class="imgupcontent">
-    	<div class="formbox">
+    <div style="width:450px;float:left;" class="imgupcontent">
+    	<div class="formbox" style="width:450px;">
         	<div class="formboxtitle">
             </div>
             <div class="formboxitem">
