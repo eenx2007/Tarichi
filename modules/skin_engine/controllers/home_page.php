@@ -60,8 +60,12 @@ class Home_page extends Frontsite_Controller {
 		}
 		else
 		{
-			$query=$this->db->get('static_home_page');
-			$this->data['row']=$query->row();
+			$this->load->model('static_home_page/static_home_page_model');
+			
+			$query=$this->static_home_page_model->get_home();
+			$row=$query->row();
+			$this->data['title']=$row->static_home_page_title;
+			$this->data['content']=$row->static_home_page_content;
 			
 			$this->load->view('../../skins/'.$this->site_config->site_skin.'/views/content_static',$this->data);
 			
