@@ -33,6 +33,7 @@
 		padding-top:5px;
 		padding-bottom:5px;
 		text-align:center;
+		width:100%;
 	}
 	
 	#menu a{
