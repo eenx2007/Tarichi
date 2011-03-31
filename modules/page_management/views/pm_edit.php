@@ -1,5 +1,5 @@
 <? $this->load->view('the_master/top'); ?>	
-<script type="text/javascript" src="<?php echo base_url();?>jquery/tiny_mce/jquery.tinymce.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets/jquery/tiny_mce/jquery.tinymce.js"></script>
     <script type="text/javascript">
 		$(document).ready(function(){
 								   
@@ -34,7 +34,7 @@
 								$('#image_library2').load('<?php echo site_url('ajax_things/image_library2');?>');
 												});
 				$('#the_page_content').tinymce({
-					script_url : '<?php echo base_url();?>jquery/tiny_mce/tiny_mce.js',					  
+					script_url : '<?php echo base_url();?>assets/jquery/tiny_mce/tiny_mce.js',					  
 					relative_urls : false,
 
 					theme : "advanced",

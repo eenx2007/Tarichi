@@ -1,13 +1,13 @@
 <? $this->load->view('the_master/top'); ?>	
-<script type="text/javascript" src="<?php echo base_url();?>jquery/ui/ui.core.js"></script>
-<link rel="stylesheet" href="<?php echo base_url();?>jquery/ui/themes/ui-lightness/jquery.ui.all.css">
+<script type="text/javascript" src="<?php echo base_url();?>assets/jquery/ui/ui.core.js"></script>
+<link rel="stylesheet" href="<?php echo base_url();?>assets/jquery/ui/themes/ui-lightness/jquery.ui.all.css">
 
 
-<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>jquery/ui/themes/redmond/ui.dialog.css" />
-<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>jquery/ui/themes/redmond/ui.resizable.css" />
-<script type="text/javascript" src="<?php echo base_url();?>jquery/ui/ui.dialog.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>jquery/ui/ui.resizable.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>jquery/ui/ui.draggable.js"></script>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/jquery/ui/themes/redmond/ui.dialog.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/jquery/ui/themes/redmond/ui.resizable.css" />
+<script type="text/javascript" src="<?php echo base_url();?>assets/jquery/ui/ui.dialog.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets/jquery/ui/ui.resizable.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets/jquery/ui/ui.draggable.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 			$('.the_sub_menu').hide();

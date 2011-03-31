@@ -1,5 +1,5 @@
 
-<script type="text/javascript" src="<?php echo base_url();?>jquery/ajaxfileupload.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>assets/jquery/ajaxfileupload.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 			$('#upload_loader').hide();				   
