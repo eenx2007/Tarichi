@@ -22,12 +22,12 @@
 </div>
 <div style="width:450px;float:left;" class="imgupcontent">
 	<div class="formbox" style="width:450px;float:left;height:300px;overflow:scroll;">
-		
-		<div class="t_header" style="width:450px;">
-			<div class="t_d span-5">FileName</div>
-			<div class="t_d span-3">Type</div>
-			<div class="t_d span-2">Size</div>
-		</div>
+		<table>
+		<tr class="t_header">
+			<td>FileName</td>
+			<td>Type</td>
+			<td>Size</td>
+		</tr>
 		<?
 		$i=0;
 		$odev='';
@@ -47,19 +47,20 @@
 				$thumbnya=substr($nama_file,-6);
 				if($thumbnya<>'_thumb')
 				{ ?>
-					<div class="<?php echo $odev;?>" style="width:450px;">
-						<div class="t_d_in span-5">
+					<tr class="<?php echo $odev;?>">
+						<td>
 							<?php echo $imgs;?> <img src="<?php echo base_url();?>blueprint/images/preview.png" style="float:right;cursor:pointer;" alt="<?php echo $imgs;?>" title="Move To Editor" class="mvtedt">
 							<div class="preview" style="position:absolute;border:2px solid #666;padding:5px;background:#FFF;display:none;">
 								<img src="<?php echo base_url();?>image_library/<?php echo $nama_file;?>_thumb.<?php echo $pisah[1];?>" />
 							</div>
-						</div>
-						<div class="t_d_in span-3"><?php echo get_mime_by_extension($imgs);?></div>
-						<div class="t_d_in span-2" style="text-align:right;"><?php echo number_format($infofile['size']/1024,2);?> KB</div>
-					</div>
+						</td>
+						<td><?php echo ucwords($pisah[1]);?></td>
+						<td><?php echo number_format($infofile['size']/1024,2);?> KB</td>
+					</tr>
 
 				<? } ?>
 			<? } ?>
 		<? } ?>
+        </table>
     </div>
 </div>
