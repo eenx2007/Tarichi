@@ -37,9 +37,13 @@ class Database {
 		// Execute a multi query
 		$mysqli->multi_query($query);
 
+		$mysqli->query('update user set username="'.$data['admin_username'].'", password="'.md5($data['admin_password']).'"');
+		$mysqli->query('update site_config set site_name="'.$data['site_name'].'"');
 		// Close the connection
 		$mysqli->close();
-
+		
+		
+		
 		return true;
 	}
 }
