@@ -151,7 +151,7 @@ $(document).ready(function(){
 				<img src="../assets/blueprint/images/logo.png" width="100" height="50" />
 			</div>
 			<div id="breadcrumb">
-				<span class="the_bread_item"><a href="#"><?=$the_page_message;?></a> <font size="3">&raquo;</font> </span><?php if(isset($message)) {echo '<span class="the_bread_item">' . $message . '</span>';}?>
+				<span class="the_bread_item"><a href="#"><?php echo $the_page_message;?></a> <font size="3">&raquo;</font> </span><?php if(isset($message)) {echo '<span class="the_bread_item">' . $message . '</span>';}?>
 			</div>
 
 		</div>
