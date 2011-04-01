@@ -26,7 +26,10 @@ class Database {
 	{
 		// Connect to the database
 		$mysqli = new mysqli($data['hostname'],$data['username'],$data['password'],$data['database']);
-
+		$_SESSION['hostname']=$data['hostname'];
+		$_SESSION['username']=$data['username'];
+		$_SESSION['password']=$data['password'];
+		$_SESSION['database']=$data['database'];
 		// Check for errors
 		if(mysqli_connect_errno())
 			return false;
@@ -37,8 +40,7 @@ class Database {
 		// Execute a multi query
 		$mysqli->multi_query($query);
 
-		$mysqli->query('update user set username="'.$data['admin_username'].'", password="'.md5($data['admin_password']).'"');
-		$mysqli->query('update site_config set site_name="'.$data['site_name'].'"');
+		
 		// Close the connection
 		$mysqli->close();
 		
@@ -46,6 +48,25 @@ class Database {
 		
 		return true;
 	}
+	
+	function set_config($data)
+	{
+		$mysqli = new mysqli($_SESSION['hostname'],$_SESSION['username'],$_SESSION['password'],$_SESSION['database']);
+		if(mysqli_connect_errno())
+			return false;
+		$query1='update user set username="'.$data['username'].'", password="'.md5($data['password']).'"';
+		$mysqli->query($query1);
+		$query2='update site_config set site_name="'.$data['site_name'].'", site_slogan="'.$data['site_slogan'].'", site_main_email="'.$data['site_main_email'].'"';
+		$mysqli->query($query2);
+		$mysqli->close();
+		$_SESSION['admin_username']=$data['username'];
+		$_SESSION['admin_password']=$data['password'];
+		$_SESSION['site_name']=$data['site_name'];
+		$_SESSION['site_slogan']=$data['site_slogan'];
+		$_SESSION['site_main_email']=$data['site_main_email'];
+		return true;
+	}
+	
 }
 ?>
 

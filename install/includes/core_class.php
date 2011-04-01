@@ -33,6 +33,26 @@ class Core {
 			return false;
 		}
 	}
+	
+	function validate_config($data)
+	{
+		$counter=0;
+		if(isset($data['username']) AND !empty($data['username'])) {
+			$counter++;
+		}
+		if(isset($data['password']) AND !empty($data['password'])) {
+			$counter++;
+		}
+		if(isset($data['site_name']) AND !empty($data['site_name'])) {
+			$counter++;
+		}
+		if($counter=='3'){
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
 
 	// Function to show an error
 	function show_message($type,$message) {
