@@ -26,10 +26,7 @@ class Database {
 	{
 		// Connect to the database
 		$mysqli = new mysqli($data['hostname'],$data['username'],$data['password'],$data['database']);
-		$_SESSION['hostname']=$data['hostname'];
-		$_SESSION['username']=$data['username'];
-		$_SESSION['password']=$data['password'];
-		$_SESSION['database']=$data['database'];
+		
 		// Check for errors
 		if(mysqli_connect_errno())
 			return false;

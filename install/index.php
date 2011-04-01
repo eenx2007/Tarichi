@@ -42,6 +42,10 @@
 					{
 						$host  = $_SERVER['HTTP_HOST'];
 						$uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+						$_SESSION['hostname']=$_POST['hostname'];
+						$_SESSION['username']=$_POST['username'];
+						$_SESSION['password']=$_POST['password'];
+						$_SESSION['database']=$_POST['database'];
 						echo '<meta http-equiv="refresh" content="0;url=index.php?page_type=step2" />';	
 					}
 				}
@@ -195,10 +199,14 @@ $(document).ready(function(){
 				{  ?>
                 <script type="text/javascript">
 					$(document).ready(function(){
-						$('.formboxitem').hoverIntent(function(){
-							$('.small',this).fadeIn();
-							},function(){
-							$('.small',this).fadeOut();
+						$('input').focus(function(){
+							var bapak=$(this).parent();
+							$('.small',bapak).fadeIn();
+						});
+						
+						$('input').blur(function(){
+							var bapak=$(this).parent();
+							$('.small',bapak).fadeOut();
 						});
 					});
 				</script>
@@ -228,10 +236,14 @@ $(document).ready(function(){
 				{  ?>
                 <script type="text/javascript">
 					$(document).ready(function(){
-						$('.formboxitem').hoverIntent(function(){
-							$('.small',this).fadeIn();
-							},function(){
-							$('.small',this).fadeOut();
+						$('input').focus(function(){
+							var bapak=$(this).parent();
+							$('.small',bapak).fadeIn();
+						});
+						
+						$('input').blur(function(){
+							var bapak=$(this).parent();
+							$('.small',bapak).fadeOut();
 						});
 					});
 				</script>

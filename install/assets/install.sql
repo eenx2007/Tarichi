@@ -3,14 +3,14 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 31, 2011 at 11:53 AM
+-- Generation Time: Apr 01, 2011 at 10:29 PM
 -- Server version: 5.1.30
 -- PHP Version: 5.2.8
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 --
--- Database: `db_tarichi`
+-- Database: `db_percobaan`
 --
 
 -- --------------------------------------------------------
@@ -182,7 +182,7 @@ CREATE TABLE IF NOT EXISTS `site_config` (
 --
 
 INSERT INTO `site_config` (`site_name`, `site_slogan`, `site_date_format`, `site_skin`, `site_status`, `site_home_page_type`, `site_per_page_post`, `site_comment_moderation`, `site_main_email`, `site_default_keywords`, `site_default_description`, `site_split_post`, `site_language`) VALUES
-('Tarichi 2', 'Sebuah Web Publishing System', '%d/%m/%Y %h:%i:%s', 'vilabe', 1, 1, 5, 1, 'yourmail@domain.com', 'tarichi, web publishing system, cms', 'Ini situs cuma contoh', 100, 'english');
+('Tarichi 2', 'a web publishing system', '%d/%m/%Y %h:%i:%s', 'vilabe', 1, 1, 5, 1, 'eenx@eenx.com', 'tarichi, web publishing system, cms', 'Ini situs cuma contoh', 100, 'english');
 
 -- --------------------------------------------------------
 
@@ -305,7 +305,6 @@ CREATE TABLE IF NOT EXISTS `the_tag` (
 --
 
 INSERT INTO `the_tag` (`the_tag_id`, `the_tag_name`, `the_tag_name_url`) VALUES
-(1, '', ''),
 (2, 'Post', 'Post'),
 (3, 'Tarichi', 'Tarichi'),
 (4, 'Sample', 'Sample'),
@@ -329,7 +328,6 @@ CREATE TABLE IF NOT EXISTS `the_tag_connector` (
 --
 
 INSERT INTO `the_tag_connector` (`the_tag_connector_id`, `the_tag_name`, `the_post_id`) VALUES
-(1, '', 1),
 (2, 'Post', 2),
 (3, 'Tarichi', 2),
 (4, 'Sample', 2),
