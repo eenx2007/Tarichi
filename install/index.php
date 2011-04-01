@@ -283,7 +283,7 @@ $(document).ready(function(){
                         <p>
                         	Your Username : <?php echo $_SESSION['admin_username'];?><br />
                             Your Password : <?php echo $_SESSION['admin_password'];?><br />
-                            
+                            <?php session_destroy(); ?>
                         </p></div>
                     </div>
                     <div class="formbox separo">
