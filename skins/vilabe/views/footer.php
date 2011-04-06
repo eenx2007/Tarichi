@@ -31,7 +31,7 @@
             	<object id="pingbox6n3ymjl0lr40W" type="application/x-shockwave-flash" data="http://wgweb.msg.yahoo.com/badge/Pingbox.swf" width="240" height="420"><param name="movie" value="http://wgweb.msg.yahoo.com/badge/Pingbox.swf" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="wid=DntzdVaoUW0CFsSBBK3mgQ--" /></object>
 					
                 </div>
-            	<a href="javascript:void(0);" id="backtotop">&uarr; Kembali ke atas</a> | <a href="javascript:void(0);" class="chat_yahoo">Yahoo Chat</a>
+            	<a href="javascript:void(0);" id="backtotop">&uarr; Kembali ke atas</a> | <a href="javascript:void(0);" class="chat_yahoo">Yahoo Chat</a> | <?php echo anchor('feed','Feeds');?>
                
             </div>
             <div class="span-12 last" style="margin-top:20px;text-align:right;">
