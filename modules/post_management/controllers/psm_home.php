@@ -22,6 +22,6 @@ class Psm_home extends Master_Controller {
 	function delete($the_post_id)
 	{
 		$this->the_post_model->delete($the_post_id);
-		redirect('the_master/post_management/home');	
+		redirect('post_management/psm_home');	
 	}
 }
